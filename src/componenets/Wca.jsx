@@ -9,21 +9,23 @@ const Wca = () => {
       <h1 className="text-3xl font-bold text-center mb-6">My Portfolio</h1>
 
       {/* Buttons with Animation */}
-      <div className="flex justify-center gap-4 mb-6">
-        {["Achievements", "Certificates", "Work Experience"].map((section) => (
-          <motion.button
-            key={section}
-            className={`px-6 py-2 rounded transition ${
-              activeSection === section ? "bg-blue-500" : "bg-gray-700"
-            }`}
-            onClick={() => setActiveSection(section)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.8 }}
-          >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
-          </motion.button>
-        ))}
-      </div>
+
+<div className="flex flex-wrap justify-center gap-4 mb-6">
+  {["Achievements", "Certificates", "Work Experience"].map((section) => (
+    <motion.button
+      key={section}
+      className={`px-6 py-2 rounded transition ${
+        activeSection === section ? "bg-blue-500" : "bg-gray-700"
+      }`}
+      onClick={() => setActiveSection(section)}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.8 }}
+    >
+      {section.charAt(0).toUpperCase() + section.slice(1)}
+    </motion.button>
+  ))}
+</div>
+
 
       {/* Content Section with Animation */}
       <motion.div

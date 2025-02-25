@@ -36,10 +36,10 @@ const Footer = () => {
           </motion.h2>
           <div className="flex flex-col space-y-2">
             {[
-              { name: "Instagram", url: "https://instagram.com/your-profile", img: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png" },
-              { name: "LinkedIn", url: "https://linkedin.com/in/your-profile", img: "https://cdn-icons-png.flaticon.com/512/174/174857.png" },
+              { name: "Instagram", url: "https://instagram.com/", img: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png" },
+              { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-rawat-650401250/", img: "https://cdn-icons-png.flaticon.com/512/174/174857.png" },
               { name: "GitHub", url: "https://github.com/Tarun-rawat-007", img: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
-              { name: "Facebook", url: "https://facebook.com/your-profile", img: "https://cdn-icons-png.flaticon.com/512/124/124010.png" }
+              { name: "Facebook", url: "https://www.facebook.com/tarun.prime", img: "https://cdn-icons-png.flaticon.com/512/124/124010.png" }
             ].map((social, index) => (
               <motion.a 
                 key={index}

@@ -34,8 +34,8 @@ const Skills = () => {
                         className="flex gap-8 animate-marquee"
                         style={{ animationDuration: "20s", whiteSpace: "nowrap" }}
                         initial={{ x: "10%" }}
-                        animate={{ x: "-100%" }}
-                        transition={{ ease: "linear", duration: 20, repeat: Infinity }}
+                        animate={{ x: "-200%" }} // Move further for smoother looping
+                        transition={{ ease: "linear", duration: window.innerWidth < 768 ? 5 : 10, repeat: Infinity }}
                     >
                         {[...skills, ...skills].map((skill, index) => (
                            <div
@@ -65,20 +65,35 @@ const Skills = () => {
 
             {/* Keyframes for Continuous Animation */}
             <style>
-                {`
-                    @keyframes marquee {
-                        0% {
-                            transform: translateX(10%);
-                        }
-                        100% {
-                            transform: translateX(-100%);
-                        }
-                    }
-                    .animate-marquee {
-                        animation: marquee linear infinite;
-                    }
-                `}
-            </style>
+    {`
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee linear infinite;
+            animation-duration: 20s; /* Default speed for laptops */
+        }
+
+        @media (max-width: 768px) {
+            .animate-marquee {
+                animation-duration: 10s; /* Faster animation on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .animate-marquee {
+                animation-duration: 3s; /* Even faster for mobile devices */
+            }
+        }
+    `}
+</style>
+
         </section>
     );
 };

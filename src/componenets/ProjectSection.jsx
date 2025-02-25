@@ -86,7 +86,7 @@ const projects = [
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:underline cursor-pointer"
                     >
-                     <p className="text-xs font-semibold mb-4">{project.link}</p>
+                     <p className="text-xs font-semibold mb-0">{project.link}</p>
                     </a>
                   </div>
                   

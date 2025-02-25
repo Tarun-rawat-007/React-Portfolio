@@ -1,6 +1,6 @@
 
 
-Live Preview: [tarun-portfolio-938453.netlify.app](https://tarun-portfolio-938453.netlify.app/)
+Live Preview: https://tarun-portfolio-7df025.netlify.app/
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
